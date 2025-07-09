@@ -3,15 +3,20 @@
 body {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
+  background: #f5f0f0;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 *{margin: 0px; padding: 0px; box-sizing: border-box;}
 
 .container {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 
 .link:hover{color: #ff5252;}
 
 .MuiBadge-badge{background-color: #ff5252 !important;}
+
+nav ul button{text-transform: capitalize !important;}
+

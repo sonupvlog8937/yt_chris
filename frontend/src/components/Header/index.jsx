@@ -5,6 +5,8 @@ import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import { FaCartShopping } from "react-icons/fa6";
+import Tooltip from "@mui/material/Tooltip";
+import Navigation from "./Navigation";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -17,8 +19,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   return (
-    <header>
-      <div className="top-strip py-2 border-t-[1px] border-gray-300 border-b-[1px]">
+    <header className="bg-white">
+      <div className="top-strip py-2 border-t-[1px] border-gray-250 border-b-[1px]">
         <div className="container">
           <div className="flex item-center justify-between">
             <div className="col1 w-[50%]">
@@ -51,7 +53,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="header py-3">
+      <div className="header py-4 border-b-[1px] border-gray-250">
         <div className="container flex items-center justify-between">
           <div className="col1 w-[25%]">
             <Link className="text-xl font-[600]" to={"/"}>
@@ -80,30 +82,38 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <IconButton aria-label="cart">
-                  <StyledBadge badgeContent={4} color="secondary">
-                    <FaCartShopping />
-                  </StyledBadge>
-                </IconButton>
+                <Tooltip title="compare">
+                  <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={4} color="secondary">
+                      <FaCartShopping />
+                    </StyledBadge>
+                  </IconButton>
+                </Tooltip>
               </li>
               <li>
-                <IconButton aria-label="cart">
-                  <StyledBadge badgeContent={4} color="secondary">
-                    <FaCartShopping />
-                  </StyledBadge>
-                </IconButton>
+                <Tooltip title="Cart">
+                  <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={4} color="secondary">
+                      <FaCartShopping />
+                    </StyledBadge>
+                  </IconButton>
+                </Tooltip>
               </li>
               <li>
-                <IconButton aria-label="cart">
-                  <StyledBadge badgeContent={4} color="secondary">
-                    <FaCartShopping />
-                  </StyledBadge>
-                </IconButton>
+                <Tooltip title="Wishlist">
+                  <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={4} color="secondary">
+                      <FaCartShopping />
+                    </StyledBadge>
+                  </IconButton>
+                </Tooltip>
               </li>
             </ul>
           </div>
         </div>
       </div>
+
+      <Navigation />
     </header>
   );
 };
