@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { FaRocket } from "react-icons/fa";
 import CategoryPanel from "./CategoryPanel";
 
-import "../Navigation/style.css"
+import "../Navigation/style.css";
 
 const Navigation = () => {
   const [isOpenCatPanel, setIsOpenCatPanel] = useState(false);
@@ -29,7 +29,7 @@ const Navigation = () => {
               <FaAngleDown className="text-[13px] font-bold ml-auto cursor-pointer" />
             </Button>
           </div>
-          <div className="col_2 w-[60%]">
+          <div className="col_2 w-[60%] nav">
             <ul className="flex items-center gap-3">
               <li className="list-none">
                 <Link to="/" className="link transition text-[14px] font-[500]">
@@ -45,12 +45,97 @@ const Navigation = () => {
                   </Button>
                 </Link>
 
-                <div className="submenu absolute top-[100%] left-[0%] min-w-[300px] bg-white shadow-md">
-                    <ul>
-                        <li className="list-none">
-                            <Button className="text-[rgba(0,0,0,0.8)]">Men</Button>
-                        </li>
-                    </ul>
+                <div className="submenu absolute top-[120%] left-[0%] min-w-[150px] bg-white shadow-md opacity-0 transition-all">
+                  <ul>
+                    <li className="list-none w-full relative">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                        <div className="submenu absolute top-[0%] left-[100%] min-w-[150px] bg-white shadow-md opacity-0 transition-all">
+                  <ul>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                    <li className="list-none w-full">
+                      <Link to="/" className="w-full">
+                        <Button className="!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none">
+                          Men
+                        </Button>
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li className="list-none">
@@ -87,7 +172,6 @@ const Navigation = () => {
       </nav>
       {/* categorypanel */}
       <CategoryPanel
-        
         isOpenCatPanel={isOpenCatPanel}
         setIsOpenCatPanel={setIsOpenCatPanel}
       />
